@@ -1,6 +1,7 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import img from '../../assets/images/login-1.jpeg';
+import logo from '../../assets/images/logo.jpeg';
 
 const Login = () => {
   return (
@@ -18,17 +19,25 @@ const Login = () => {
           marginTop: -100,
           backgroundColor: 'orange',
           borderRadius: 4,
+
           // flex: 1,
           justifyContent: 'center',
           flexDirection: 'column',
           padding: 20,
           borderRadius: 20,
         }}>
+        <View style={{justifyContent: 'center', alignItems: 'center', paddingBottom: 16}}>
+          <Image
+            source={logo}
+            style={{height: 60, width: 60, borderRadius: 60}}
+          />
+        </View>
+
         <Text
           style={{
             textAlign: 'center',
             fontSize: 30,
-            fontWeight: '900',
+            fontWeight: 'bold',
             paddingBottom: 16,
           }}>
           Welcome To Warrior Fitness Gym App
@@ -37,7 +46,6 @@ const Login = () => {
           style={{
             textAlign: 'center',
             fontSize: 19,
-            fontWeight: '900',
             paddingBottom: 16,
           }}>
           Deliver your order around world without hesitation.
@@ -47,7 +55,7 @@ const Login = () => {
             alignItems: 'center',
             backgroundColor: '#DDDDDD',
             padding: 16,
-            borderRadius: 30
+            borderRadius: 30,
           }}>
           <Text>Login</Text>
         </TouchableOpacity>
